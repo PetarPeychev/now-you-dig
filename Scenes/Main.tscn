@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/DebugOverlay.gd" type="Script" id=1]
+[ext_resource path="res://Assets/cave-ambiance.ogg" type="AudioStream" id=2]
 
 [node name="Main" type="Node"]
 
@@ -21,3 +22,8 @@ text = "Debug Overlay Text"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AmbiancePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -25.0
+autoplay = true
